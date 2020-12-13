@@ -54,10 +54,11 @@
                             <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>PAYMET ID</th>
+                                <th>PAYMENT ID</th>
                                 <th>CREATION DATE</th>
                                 <th>EDIT</th>
                                 <th>DELETE</th>
+                                <th>PAY</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -67,6 +68,7 @@
                                 <td th:text="${ticket.getCreationDate()}"></td>
                                 <td><a th:href="@{/tickets/edit/{id}(id=${ticket.getId()})}" class="btn btn-primary"><i class="fas fa-edit"></i></a></td>
                                 <td><a th:href="@{/tickets/delete/{id}(id=${ticket.getId()})}" class="btn btn-primary"><i class="fas fa-trash-alt"></i></a></td>
+                                <td><a th:href="@{/tickets/receipt/{id}(id=${ticket.getId()})}" class="btn btn-primary"><i class="far fa-money-bill-alt"></i></a></td>
                             </tr>
                             </tbody>
                         </table>
